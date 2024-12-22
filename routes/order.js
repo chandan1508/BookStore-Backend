@@ -29,7 +29,7 @@ router.post("/place-order", authenticateToken, async (req, res) => {
       message: "Order Placed Successfully",
     });
   } catch (error) {
-    console.log(error);
+    
     return res.status(500).json({ message: "An error occurred" });
   }
 });
@@ -49,7 +49,7 @@ router.get("/get-order-history", authenticateToken, async (req, res) => {
       data: orderData,
     });
   } catch (error) {
-    console.log(error);
+   
     return res.status(500).json({ message: "An error occurred" });
   }
 });
@@ -71,7 +71,7 @@ router.get("/get-all-orders", authenticateToken, async (req, res) => {
       data: userData,
     });
   } catch (error) {
-    console.log(error);
+    
     return res.status(500).json({ message: "An error occurred" });
   }
 });
@@ -87,7 +87,7 @@ router.put("/update-status/:id", authenticateToken, async (req, res) => {
       message: "Status Updates Successfully",
     });
   } catch (error) {
-    console.log(error);
+    
     return res.status(500).json({ message: "An error occurred" });
   }
 });

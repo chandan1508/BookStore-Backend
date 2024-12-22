@@ -23,7 +23,7 @@ router.put("/add-to-cart", authenticateToken, async (req, res) => {
       message: "Book added to cart",
     });
   } catch (error) {
-    console.log(error);
+    
     return res.status(500).json({ message: "An error occurred" });
   }
 });
@@ -41,7 +41,7 @@ router.put("/remove-from-cart/:bookid", authenticateToken, async (req, res) => {
       message: "Book removed from cart",
     });
   } catch (error) {
-    console.log(error);
+    
     return res.status(500).json({ message: "An error occurred" });
   }
 });
@@ -57,7 +57,7 @@ router.get("/get-user-cart", authenticateToken, async (req, res) => {
       data: cart,
     });
   } catch (error) {
-    console.log(error);
+    
     return res.status(500).json({ message: "An error occurred" });
   }
 });

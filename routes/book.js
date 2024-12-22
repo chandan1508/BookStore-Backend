@@ -60,7 +60,7 @@ router.delete("/delete-book", authenticateToken, async (req, res) => {
       message: "Book deleted successfull!",
     });
   } catch (error) {
-    console.log(error);
+    
     return res.status(500).json({ message: "An error occurred" });
   }
 });
